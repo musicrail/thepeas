@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle='Blog posts'>
-      <p>Posts will go here.</p>
+      {/* <Seo pageTitle={"he"} /> */}
       <ul>
         {
           data.allFile.nodes.map(node => (
