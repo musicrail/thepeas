@@ -1,31 +1,30 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { 
+import * as React from "react";
+import { Link } from "gatsby";
+import {
   container,
   heading,
   navLinks,
   navLinkItem,
-  navLinkText
-} from './layout.module.css'
+  navLinkText,
+} from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
-  
   return (
     <div className={container}>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to='/' className={navLinkText}>
+            <Link to="/" className={navLinkText}>
               Home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/about' className={navLinkText}>
+            <Link to="/about" className={navLinkText}>
               About
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/blog' className={navLinkText}>
+            <Link to="/blog" className={navLinkText}>
               Blog
             </Link>
           </li>
@@ -33,10 +32,10 @@ const Layout = ({ pageTitle, children }) => {
       </nav>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
-          {children}
+        {children}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

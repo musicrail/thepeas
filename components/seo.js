@@ -1,22 +1,22 @@
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ pageTitle }) => {
-  const query = useStaticQuery(
-      graphql`query {
+  const gql = graphql`
+    query SeoQuery {
       site {
         siteMetadata {
           title
         }
       }
-    }`
-    )
+    }
+  `;
+
+  const query = useStaticQuery(gql);
 
   return (
-    <div>
       <header>{query.site.siteMetadata.title}</header>
-    </div>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;
