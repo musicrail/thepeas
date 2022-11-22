@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const BlogPage = ({ data }) => {
   return (
@@ -26,6 +26,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <title>Blog posts</title>;
+export const Head = () => <Seo pageTitle="Blog posts" />
 
 export default BlogPage;
