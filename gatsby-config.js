@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `thepeas`,
-    description: 'hey, some peas in a barn',
+    description: `hey, some peas in a barn`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
